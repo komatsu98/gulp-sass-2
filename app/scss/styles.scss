@@ -1,284 +1,278 @@
 body {
-	font-family: Montserrat;
-    color: white;
-    text-align: justify;
-    padding: 120px 110px 8px 100px;
-    font-size: 24px;
-    box-sizing: border-box;
-    background: rgb(40,40,40);
-}
-@mixin bbox-relative {
-	box-sizing: border-box;
-	position: relative;
-}
-.container {
-	display: block;
-    margin: 0 auto;
-    width: 1300px;
-    height: 1839px;
-    @include bbox-relative;
-}
-.left {
-	position: relative;
-    width: 360px;
-    margin-left: 100px !important;
-    z-index: 3;
+    background: rgb(40, 40, 40);
+    color: rgb(35, 35, 35);
+    padding-top: 80px;
+    font-size: 32px;
+    /*width: 718px;*/
     text-align: center;
-    display: inline-block;
-    height: 100%;
+    box-sizing: border-box;
+
 }
-.right {
-	width: 688px;
-    position: relative;
-    float: right;
-    padding-right: 108px;
-    text-align: right;
-    font-weight: 800;
-    display: inline-block;
-    height: 100%;
+
+.container {
+    width: 718px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+header {
+    height: 120px;
+    width: 718px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 56px;
+    box-sizing: border-box;
+    div {
+        display: block;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .right {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.search {
+    border-right: 1px solid #bbbbbb;
+}
+.icon {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.logo {
+    i {
+        color: rgb(64, 81, 181);
+    }
+} 
+
+i {
+    font-size: 44px;
+    cursor: pointer;
 }
 .item-1 {
-    background: white;
-    height: 335px;
+    height: 562px;
+    width: 718px;
     position: relative;
-    .left{
-		margin: auto;
-    	box-sizing: border-box;
-    	padding-top: 95px;
-    	.big {
-    		font-size: 100px;
-    		font-weight: 800;
-    	}
-    	.medium {
-		    font-size: 26px;
-		    font-weight: 300;
-		}	
+    z-index: 1;
+    background-image: url("../images/background.jpg");
+    background-position: center;
+    margin-top: -160px;
+    .background-op {
+        height: 562px;
+        width: 718px;
+        position: absolute;
+        background: rgb(51, 51, 51);
+        opacity: 0.5;
+        z-index: 2;
+    }
+    .big {
+	    position: relative;
+
+	    z-index: 3;
+	    font-size: 42px;
+	    margin-top: 160px;
+	    padding-top: 160px;
+	    font-weight: 800;
 	}
-	.right {
-	    font-size: 36px;
-	    margin: auto;
-	    padding-top: 115px;
-	    padding-right: 144px;
-		@include bbox-relative;
+	.medium {
+	    z-index: 3;
+	    position: relative;
+	    font-size: 28px;
+	    padding-top: 40px;
+	    padding-bottom: 40px;
+	    color: rgb(221, 221, 221);
 	}
-	.right-box {
-	    top: 100px;
-	    right: 0;
-	    position: absolute;
-	    height: 112px;
-	    width: 108px;
+}
+@mixin pink-btn {
+	background: rgb(233, 30, 99);
+    font-size: 24px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-weight: 600;
+}
+ 	
+button.shop {
+    z-index: 3;
+    position: relative;
+    padding: 20px 30px;
+    @include pink-btn;
+}
+.slide-mark {
+    z-index: 3;
+    position: relative;
+    text-align: center;
+    padding-top: 125px;
+    i {
+	    background: transparent;
+	    color: white;
+	    font-size: 24px;
+	}
+	.active {
+	    color: rgb(233, 30, 99) !important;
 	}
 }
 .item-2 {
-    height: 548px;
-    position: relative;
-    .left {
-	    @include bbox-relative;
-	    padding-left: 60px;
-	    padding-right: 60px;
-	    .white-small-div {
-		    top: 295px;
-		}
-		.text {
-		    position: relative;
-		    font-size: 20px;
-		    top: 340px;
-		    text-align: left;
-		}
+    height: 1375px;
+    background: white;
+    padding-top: 68px;
+    .category {
+	    font-size: 32px;
+	    font-weight: 500;
 	}
-	.right {
-	    width: 746px;
-	    @include bbox-relative;
-	    .medium {
-		    font-size: 60px;
-		}
-		.big {
-		    font-size: 130px;
-		    font-weight: 800;
-		}
-		.small {
-		    font-size: 20px;
-		}
+	hr {
+	    width: 60px;
+	    height: 4px;
+	    background: rgb(64, 81, 181);
+	    border: none;
+	}
+	.products {
+	    width: 718px;
+	    max-height: 1130px;
+	    overflow: auto;
 	}
 }
-.item-3 {
-    height: 952px;
-    position: relative;
-    background: url(../images/background.png);
-    background-position-y: top;
-    background-size: 1300px 952px;
-    .left {
-	    @include bbox-relative;
-	    padding-left: 60px;
-	    padding-right: 0;
-	    .medium {
-		    position: relative;
-		    font-size: 36px;
-		    font-weight: 600;
-		    text-align: left;
-		    top: 198px;
-		    padding-bottom: 78px;
-		}
-		.white-small-div {
-		    right:0;
-		    top: 125px;
-		}
-		.contact {
-		    @include bbox-relative;
-		    top: 200px;
-		    margin-left: -160px;
-		    height: 484px;
-		    padding-left: 100px;
-		    padding-top: 125px;
-		}
-	}
-	.right {
-	    padding-top:90px;
-	    z-index: 3;
-	    .big {
-		    font-size: 72px;
-		    text-align: right;
-		}
-		:nth-child(3).big{
-		    padding-top: 240px;
-		}
-		.y-white-small-div {
-		    margin-top: 60px;
-		    position: initial;
-		    float: right;
-		}
-		.logo {
-		    background: rgb(56,102,120);
-		    height: 160px;
-			@include bbox-relative;
-		    width: 840px;
-		    z-index: 1;
-		    margin-left: -44px;
-		    margin-top: 49px;
-		    padding-top:40px;
-		    padding-right:0;
-		    padding-left: 40px;
-		    padding-bottom:50px;
-
-		}
-	}
-	.small {
-	    text-align: right;
-	}
-
+.card {
+    box-sizing: border-box;
+    width: 305px;
+    height: 530px;
+    margin: 20px 15px 20px 24px;
+    padding: 20px 5px 20px 5px;
+    display: inline-block;
+    box-shadow: 0 0 8px 2px rgb(227, 227, 227);
 }
-.logo {
-	.icon {
-		display: block;
-	    padding: 10px 38px;
-	    margin-top:auto;
-	    margin-right:auto;
-	    height: 70%;
-	    position: relative;
-	    img {
-		    width: auto;
-		    float: left;
-		    box-sizing: border-box;
-		    display: inline-block;
-		    margin-top:auto;
-		    margin-right:auto;
-		    height: 100%;
-
-		}
+.avt {
+    height: 272px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    img {
+	    height: 100%;
+	    width: auto;
 	}
-	
 }
-.background-transparent {
-    position: absolute;
-    height: 792px;
-    width:1300px;
-    z-index: 2;
-    background: rgb(21,180,227);
-    opacity: 0.5;
-}
-@mixin white-sm-div {
-		position: relative;
-	    z-index: 3;
-	    background: white;
-	}
-.white-small-div {
-    @include white-sm-div;
-    width: 75px;
-    height: 25px;
-}
-.text-yellow-color {
-    color: rgb(255, 204, 49);
-}
-.text-dark-color {
-    color: rgb(36, 42, 49);
+.name {
+    color: rgb(51, 51, 51);
+    font-weight: 500;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
-.background-dark-color {
-    background-color: rgb(36, 42, 49);
+.rate {
+    padding-bottom: 5px;
+    i {
+	    font-size: 24px;
+	}
+}
+.fa-star {
+    color: rgb(153, 153, 153);
 }
 
-.background-yellow-color {
-    background-color: rgb(255, 204, 49);
+.fa-star.up {
+    color: rgb(254, 205, 45);
 }
-.yellow-bar {
-    position: absolute;
-    top: 0;
-    left: 100px;
-    height: 100%;
-    width: 360px;
-    z-index: 2;
-    border: 1px solid yellow;
+.price {
+    padding-top: 2px;
+    padding-bottom: 10px;
+    font-weight: 600;
 }
+
+button.add {
+	@include pink-btn;
+    padding: 15px 30px;
+    box-shadow: 0 0 8px 2px rgb(227, 227, 227);
+}
+.pag {
+    color: rgb(68, 68, 68);
+    button {
+	    box-shadow: 0 0 8px 2px rgb(227, 227, 227);
+	    display: inline-block;
+	    height: 60px;
+	    min-width: 60px;
+	    background: rgb(243, 243, 243);
+	    padding: 10px;
+	    border: none;
+	    margin: 14px;
+	    border-radius: 5px;
+	    font-size: 24px;
+	    margin-top: 10px;
+	}
+	.active {
+	    background: rgb(64, 81, 181);
+	    color: white;
+	}
+}
+footer {
+    min-height: 572px;
+    background: rgb(35, 35, 35);
+    color: white;
+    padding-top: 64px;
+}
+.ex-link {
+    padding: 20px 40px 40px 40px;
+    .icon {
+	    display: inline-block;
+	    border-radius: 50%;
+	    width: 60px;
+	    height: 60px;
+	    margin: auto;
+	    box-sizing: border-box;
+	    i {
+		    font-size: 26px;
+		    line-height: 60px;
+		    margin-left: 5px;
+		    margin-right: 5px;
+		}
+	}
+}
+.icon.facebook {
+    background: rgb(59, 89, 152);
+}
+
+.icon.twitter {
+    background: rgb(0, 172, 237);
+}
+
+.icon.google {
+    background: rgb(221, 75, 57);
+}
+
+.icon.instagram {
+    background: rgb(81, 127, 166);
+}
+
+.icon.rss {
+    background: rgb(254, 126, 0);
+}
+
+.copyright {
+    padding-top: 80px;
+}
+
+i.fa-copyright {
+    font-size: 26px;
+}
+
 .white {
     color: white;
 }
-.black {
-    color: black;
+.color {
+    background: rgb(233, 30, 99);
+    color: rgb(64, 81, 181);
 }
-.background-lighter-dark-color {
-    background: rgb(56, 102, 120);
-    color: rgb(156, 211, 238);
+.products::-webkit-scrollbar {
+    width: 0.3em;
 }
-.y-white-small-div {
-	@include white-sm-div;
-    width: 24px;
-    height: 75px;
+
+.products::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 }
-.small.white {
-    padding-bottom: 30px;
+
+.products::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
 }
-.grp {
-    height: auto;
-    margin-bottom: 50px;
-	@include bbox-relative;
-     .info {
-	    display: inline-block;
-	    text-align: left;
-	    width: 275px;
-	    padding: 5px 0 5px 10px;
-	}
-}
-.contact :nth-child(3).grp :nth-child(2){
-    padding-top: 1px;
-}
-.icon {
-    padding: 5px;
-    overflow: auto;
-    float: left;
-    display: inline-block;
-    img {
-	    width: 31px;
-	    float: left;
-	    box-sizing: border-box;
-	    display: inline-block;
-	}
-}
-.grey-small-div {
-    margin: auto 0 auto auto;
-    position: relative;
-    width: 434px;
-    height: 24px;
-    background: rgb(184, 181, 180);
-    margin-bottom: 72px;
-    margin-right: -109px
+button {
+    cursor: pointer;
 }
